@@ -18,20 +18,10 @@ all: nuke dep regenerate build test vet
 
 dep:
 	go install github.com/gogo/protobuf/protoc-gen-gogo
-	go install -v github.com/goccmack/gocc
-	go install -v github.com/awalterschulze/goderive
 
 checklicense:
 	go get github.com/awalterschulze/checklicense
 	checklicense . \
-	person.proto \
-	srctree.proto \
-	puddingmilkshake.proto \
-	taxonomy.proto \
-	treeregister.proto \
-	typewriterprison.proto \
-	proto/tokens/test.proto \
-	parser/debug/debug.proto \
 	doc.go \
 	tools/tools.go \
 	.svg \
@@ -51,18 +41,15 @@ bench:
 	go test -test.v -test.run=XXX -test.bench=. ./...
 
 vet:
-	go vet ./encode/...
+	go vet ./proto/...
 
 regenerate:
-	goderive ./...
-	(cd parser && make regenerate)
-	(cd encode && make regenerate)
+	(cd proto && make regenerate)
 
 clean:
 	go clean ./...
 
 nuke: clean
-	(cd parser && make nuke)
 	go clean -i ./...
 
 gofmt:

@@ -1,4 +1,4 @@
-# Copyright 2015 Walter Schulze
+# Copyright 2016 Walter Schulze
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,8 +13,4 @@
 # limitations under the License.
 
 regenerate:
-	cd debug && make regenerate
-	cd proto && make regenerate
-
-nuke:
-	(cd debug && make nuke)
+	(protoc --gogo_out=. -I=.:../../../../../:../../../../../github.com/gogo/protobuf/protobuf simple.proto)
