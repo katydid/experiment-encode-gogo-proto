@@ -1,6 +1,6 @@
 ## encode-gogo-proto
 
-Experimental encoder in Go for Protocol Buffers using gogoprotobuf.
+**Deprecated** Experimental encoder in Go for Protocol Buffers using gogoprotobuf.
 
 This package takes a [Parser interface](https://github.com/katydid/parser-go) for any parser and encodes it.
 The [encoder for JSON, XML and Reflect](https://github.com/katydid/experiment-encode-go) is also experimentally supported.
