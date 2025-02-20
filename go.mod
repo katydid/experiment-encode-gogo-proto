@@ -6,7 +6,7 @@ tool github.com/awalterschulze/checklicense
 
 tool github.com/gogo/protobuf/protoc-gen-gogo
 
-require github.com/awalterschulze/checklicense v1.0.0 // indirect
+require github.com/awalterschulze/checklicense v1.0.1 // indirect
 
 require (
 	github.com/gogo/protobuf v1.3.2
