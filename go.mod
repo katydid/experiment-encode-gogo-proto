@@ -12,5 +12,5 @@ require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/katydid/parser-go v0.7.2
 	github.com/katydid/parser-go-reflect v0.1.1
-	github.com/katydid/parser-gogo-proto v0.3.0
+	github.com/katydid/parser-gogo-proto v0.3.1
 )
