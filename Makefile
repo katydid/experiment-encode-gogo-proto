@@ -19,15 +19,6 @@ all: nuke dep regenerate build test vet
 dep:
 	go install github.com/gogo/protobuf/protoc-gen-gogo
 
-checklicense:
-	go get github.com/awalterschulze/checklicense
-	checklicense . \
-	doc.go \
-	tools/tools.go \
-	.svg \
-	.txt \
-	install_protoc.sh
-
 test:
 	go test ./...
 
@@ -54,12 +45,6 @@ nuke: clean
 
 gofmt:
 	gofmt -l -s -w .
-
-travis:
-	make all
-	make errcheck
-	make checklicense
-	make diff
 
 errcheck:
 	go get github.com/kisielk/errcheck
