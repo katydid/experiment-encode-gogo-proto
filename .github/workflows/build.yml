@@ -56,8 +56,9 @@ jobs:
         cd gopath/src/github.com/katydid/experiment-encode-gogo-proto
         make vet
     - name: Checklicencse
-      uses: awalterschulze/checklicense@v1.0.5
+      uses: awalterschulze/checklicense@v1.0.6
       with:
+        path: gopath/src/github.com/katydid/experiment-encode-gogo-proto
         ignores: doc.go install_protoc.sh .svg .txt
     - name: Diff
       run: |
